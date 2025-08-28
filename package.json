@@ -1,0 +1,29 @@
+{
+  "name": "anything-backend",
+  "description": "A library to use LLMs to power your backend and respond to any API request.",
+  "version": "1.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "node": "^24.0.0",
+    "zod": "^3.0.0"
+  },
+  "peerDependencies": {
+    "openai": "^5.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "browser": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  }
+}
