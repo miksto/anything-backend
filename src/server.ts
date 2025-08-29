@@ -1,5 +1,5 @@
 import express from "express";
-import { LlmHttpBridge } from "./index";
+import { LlmHttpBridge } from "./llm-http-bridge";
 
 const app = express();
 app.use(express.json({ limit: "1mb" }));
