@@ -6,6 +6,11 @@ return structured JSON responses.
 
 ## Usage
 
+### Prerequisites
+
+Ensure the environment variable `OPENAI_API_KEY` is set with your OpenAI API key.
+
+### Running the example Server
 To start the server, run:
 
 ```sh
@@ -14,6 +19,51 @@ npm run dev
 
 To use it, send any HTTP request (e.g., `POST`, `GET`) to the server endpoint. The server will use an LLM to generate a
 structured JSON response based on your request. You can customize the system prompt and model in your configuration.
+
+#### Example request flow:
+
+Here's an example of what a session could look like:
+
+```
+Request:
+HTTP GET /users/
+
+Response:
+{
+  "data": []
+}
+```
+
+```
+Request:
+HTTP POST /users/
+{
+  "name": "Mikael"
+}
+
+Response:
+{
+  "data": {
+    "id": 1,
+    "name": "Mikael"
+  }
+}
+```
+
+```
+Request:
+HTTP GET /users/
+
+Response:
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Mikael"
+    }
+  ]
+}
+```
 
 ## Development
 
